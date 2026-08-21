@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/pingpong-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Courier New", monospace;
+    overflow: hidden;
+}
+
+
+/* DARK OVERLAY */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+
+/* GAME CONTENT */
+
+.game {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+
+
+/* TITLE */
+
+.game h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow:
+    4px 4px 0 #ff006e,
+    -3px -3px 0 #00ffff;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+}
+
+
+/* BUTTONS */
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.Buttons button {
+    padding: 15px 35px;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid white;
+    cursor: pointer;
+    box-shadow:
+        5px 5px 0 #ff006e,
+        -3px -3px 0 #00ffff;
+}
+
+.Buttons button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-5px);
+}
+
+
+/* ICONS */
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.icons span {
+    font-size: 45px;
+    filter:
+        drop-shadow(3px 3px 0 #ff006e)
+        drop-shadow(-2px -2px 0 #00ffff);
+}

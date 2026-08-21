@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic</title>
+</head>
+<body>
+    <button onclick="reply()" id="uselessButton" >Very useful button</button>
+</body>
+</html>
+
+<script>
+    //document.getElementById("myButton") finds the HTML element with the ID "myButton" and stores it in a variable so JavaScript can use it.
+    let uselessButton = document.getElementById()
+
+    function reply() {
+        uselessButton.text
+        alert("The button was useless BTW")
+    }
+</script>
+
+<script>
+document.write("<br>")
+// To creat a variable in JS, you have to use 'let'
+let FavoriteNumber = 7.8; // We just assined a variable to a value when we did FavoriteNumber = 7
+console.log(FavoriteNumber); // console.log() prints information to the console, not the webpage. 
+document.write(FavoriteNumber); // This displays things on the webpage, we can also to math if 
+// a number or decimal
+
+// Operators are symbols that let us do something with values. There are mathmatical operators and
+//comparsion oprators (were using comparsion oprators). Here they are:
+// = equal to
+// == strictly equal to 
+// != not equal to
+// !== strictly not equal to
+// > greater than
+// < less than
+// >= greater than or equal to
+// <= less than or equal to
+document.write("<br>"); // <br> breaks the line when we open the website
+document.write(5 > 7); // There comparsions always give us true or false
+document.write("<br>"); 
+document.write(10 === 10);
+document.write("<br>"); 
+document.write(7 <= 4)
+document.write("<br>")
+// Now we have logical operations, these are used when you want to combine multiple conditions:
+// && and - both sides MUST be true
+// || or - at least 1 MUST be true
+// ! not - flips true or false
+// When working with if statements we often use logical operations
+let age = 18
+if (age >= 18){
+    document.write("You can play")
+} else {
+    document.write(" You cannot play")
+}
+document.write("<br>")
+let money = 3
+let buyAge = 14
+let hasParent = false
+if (money >= 20 && buyAge >= 16 || hasParent == true)  {
+    document.write("You can buy:<br>🎧Budget wireless earbuds<br>  📚 A few new books<br> 🎨 Art supplies<br> 💄 Makeup or beauty products<br> 🧸 A cute plush toy<br> 🎮 A small gaming accessory<br> 🧁 A baking kit<br> 👕 A clothing item<br> 🧩 A board game or puzzle<br> 🌱 A room decoration bundle")
+}else {
+    document.write("Go home! You can't get anything here🙄 ")
+}
+document.write("<br>")
+
+//Loops are used when we want to write somethin without being repetitive
+let count = 1
+
+while(count < 11) {
+   document.write(count + " ")
+    count = count + 1
+}
+document.write("<br>")
+// Easier version.
+for (let count = 1; count <= 10; count ++){
+    document.write(count  + " ")
+}
+ 
+document.write("<br>") 
+
+// A funtion is a reuseable block of code
+function greet() {
+    document.write("Hello!") // Creating a function do not run the function but defines it
+}
+greet()
+document.write("<br>") 
+// A parameter is just an input for the function
+function greetUser(username) {
+    document.write("Hello " + username);
+}
+
+greetUser("Freda");
+document.write("<br>")
+//A return sends a value back from a function.
+function addNumbers(num1, num2){
+    return(num1 + num2)
+}
+    let result = addNumbers(7, 16)
+    document.write(result)
+document.write("<br>")
+// We use arrays to store several things
+let technology = ["HTML", "CSS", "JS"] // Each item has a position, we call this index: Index0, 1, 2, 3...∞
+technology.push("PYTHON") // .push adds anything in the bracets on to the array
+technology.pop() // .pop removes the last item in the array
+document.write(technology) // Using the index numbers we can print the vaules in the array
+document.write("<br>")
+// EXCERCISE 1
+let friends = ["Serah", "Daisy", "Abeeha", "Mersha"] // These are an array of my friends
+//SOLUTION:        // We will need our friends variable as a parameter
+function addFriends(name){
+    friends.push(name) //When you call the function, the value you give it (like "Izzy") is stored in the parameter (name), and push() adds that value to the end of the friends array.
+}
+addFriends("Izzy")// This should add another friend to the array. We need a solution
+document.write(friends)
+document.write("<br>")
+// Objects store lots of data. Instead of putting it into an array we would be able to describe 1 thing with multiple delete
+let user = {
+    name: "John", // if you write .name, .age or .country when printing it, it will show the value in that it holds.
+    age: 20,
+    country: "UK"
+}
+
+document.write(user.name)
+document.write("<br>")
+// forEach() goes through every item in an array and runs the same function for each item.
+let continents = ["Asia", "Africa", "North America", "South America", "Antarctica", "Europe", "Australia"]
+
+continents.forEach(allContinents)
+
+function allContinents(continent) {
+    document.write(continent + " ")
+}
+</script>

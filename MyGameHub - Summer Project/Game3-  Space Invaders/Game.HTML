@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="Game.CSS">
+</head>
+<body>
+    
+<!-- Space background -->
+
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+    <!-- Shooting stars -->
+
+    <div class="shooting-star star1"></div>
+    <div class="shooting-star star2"></div>
+    <div class="shooting-star star3"></div>
+
+    <!-- Floating aliens -->
+
+    <div class="alien alien1">👾</div>
+    <div class="alien alien2">👾</div>
+    <div class="alien alien3">👾</div>
+
+    <!-- Main menu -->
+
+    <main class="menu">
+
+        <div class="subtitle">
+            ⚠ GALACTIC DEFENCE SYSTEM ⚠
+        </div>
+
+        <h1>
+            SPACE
+            <span>INVADERS</span>
+        </h1>
+
+        <div class="line"></div>
+
+        <p class="mission">
+            THE INVASION HAS BEGUN
+        </p>
+
+        <div class="buttons">
+
+            <a href="Space.HTML"><button class="play-button" onclick="playGame()">
+                <span>▶</span>
+                PLAY
+            </button></a>
+
+            <a href="/Website/Website.HTML"><button class="quit-button" onclick="quitGame()">
+                ✕ QUIT
+            </button></a>
+
+        </div>
+
+        <div class="status">
+            <span class="green-dot"></span>
+            SYSTEM ONLINE
+            <span class="separator">|</span>
+            MISSION READY
+        </div>
+
+    </main>
+
+    <!-- Player ship -->
+
+    <div class="player-ship">
+        🚀
+    </div>
+
+    <script>
+
+        function playGame() {
+            window.location.href = "game.html";
+        }
+
+        function quitGame() {
+            window.location.href = "../Website/Website.HTML";
+        }
+
+    </script>
+
+</body>
+</html>

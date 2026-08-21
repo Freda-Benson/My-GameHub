@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background:radial-gradient(circle at center, rgba(70, 0, 100, 0.25)  transparent 45%)url("images/Space-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* =========================
+   STAR FIELD
+========================= */
+
+.stars,
+.stars2,
+.stars3 {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        20px 50px white,
+        100px 120px white,
+        180px 30px white,
+        260px 170px white,
+        350px 80px white,
+        430px 220px white,
+        510px 40px white,
+        600px 140px white,
+        690px 60px white,
+        770px 200px white,
+        850px 100px white,
+        930px 250px white,
+        1020px 50px white,
+        1100px 170px white,
+        1180px 90px white,
+        1260px 220px white,
+        1350px 40px white,
+        1450px 150px white,
+        1520px 70px white;
+    animation: starsMove 8s linear infinite;
+}
+
+.stars2 {
+    transform: scale(0.6);
+    opacity: 0.6;
+    animation-duration: 13s;
+}
+
+.stars3 {
+    transform: scale(1.4);
+    opacity: 0.35;
+    animation-duration: 20s;
+}
+
+@keyframes starsMove {from {transform: translateY(0); }
+    to {
+        transform: translateY(100px);
+    }
+
+}
+
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.menu {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* =========================
+   TOP WARNING
+========================= */
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 6px;
+    color: #00eaff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00eaff;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {0%, 100% {opacity: 1;}50% {opacity: 0.5;}
+}
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-size: clamp(70px, 10vw, 130px);
+    line-height: 0.8;
+    letter-spacing: 8px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 15px #00eaff, 0 0 35px #00eaff;
+    animation: titlePulse 3s ease-in-out infinite;
+}
+
+h1 span {
+    display: block;
+    color: #d000ff;
+    font-size: 0.75em;
+    margin-top: 15px;
+    text-shadow:0 0 5px #d000ff,0 0 15px #d000ff,0 0 35px #ff00ea;
+}
+
+@keyframes titlePulse {0%, 100% {transform: scale(1);}50% {transform: scale(1.03);}
+}
+
+/* =========================
+   NEON LINE
+========================= */
+
+.line {
+    width: 400px;
+    max-width: 70vw;
+    height: 2px;
+    margin: 30px 0 15px;
+    background: linear-gradient(90deg,transparent,#00eaff,#d000ff,#00eaff,transparent);
+    box-shadow: 0 0 10px #00eaff, 0 0 20px #d000ff;
+}
+
+
+/* =========================
+   MISSION TEXT
+========================= */
+
+.mission {
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #ddd;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 350px;
+    max-width: 80vw;
+}
+
+
+button {
+    height: 70px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+/* PLAY */
+
+.play-button {
+    color: white;
+    background: linear-gradient(90deg, rgba(110, 0, 180, 0.7), rgba(210, 0, 255, 0.7));
+    border: 2px solid #d000ff;
+    box-shadow: 0 0 10px #d000ff, 0 0 25px rgba(208, 0, 255, 0.5);
+}
+
+
+.play-button:hover {
+    transform: scale(1.07);
+    background: #d000ff;
+    color: black;
+    box-shadow: 0 0 15px #d000ff, 0 0 40px #d000ff, 0 0 70px #d000ff;
+}
+
+.play-button span {
+    margin-right: 10px;
+}
+
+
+/* QUIT */
+
+.quit-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #aaa;
+    border: 2px solid #555;
+}
+
+.quit-button:hover {
+    transform: scale(1.04);
+    color: white;
+    border-color: #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+}
+
+
+/* =========================
+   SYSTEM STATUS
+========================= */
+
+.status {
+    margin-top: 30px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+.green-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #00ff88;
+    box-shadow:0 0 8px #00ff88;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #555;
+}
+
+
+/* =========================
+   ALIENS
+========================= */
+
+.alien {
+    position: fixed;
+    z-index: 5;
+    font-size: 45px;
+    filter: drop-shadow(0 0 10px #d000ff) drop-shadow(0 0 20px #d000ff);
+}
+
+.alien1 {
+    top: 18%;
+    left: 8%;
+    animation: alienFloat 4s ease-in-out infinite;
+}
+
+.alien2 {
+    top: 28%;
+    right: 8%;
+    animation: alienFloat 5s ease-in-out infinite reverse;
+}
+
+.alien3 {
+    bottom: 20%;
+    left: 15%;
+    font-size: 30px;
+    animation: alienFloat 6s ease-in-out infinite;
+}
+
+@keyframes alienFloat {0%, 100% {transform: translateY(0) rotate(-5deg)}
+    50%{transform: translateY(-25px) rotate(5deg);}
+}
+/* =========================
+   PLAYER SHIP
+========================= */
+
+.player-ship {
+    position: fixed;
+    z-index: 6;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 55px;
+    filter:drop-shadow(0 0 10px #00eaff) drop-shadow(0 0 25px #00eaff);
+    animation: shipFloat 2s ease-in-out infinite;
+}
+
+@keyframes shipFloat {0%, 100% {transform: translateX(-50%) translateY(0);}
+    50%{transform: translateX(-50%) translateY(-8px);}
+}
+/* =========================
+   SHOOTING STARS
+========================= */
+.shooting-star {
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#00eaff,white);
+    transform: rotate(-35deg);
+    opacity: 0;
+    z-index: 3;
+}
+
+.star1 {
+    top: 15%;
+    left: -100px;
+    animation: shooting 5s linear infinite;
+}
+
+.star2 {
+    top: 45%;
+    left: -100px;
+    animation: shooting 7s linear infinite 2s;
+}
+
+.star3 {
+    top: 70%;
+    left: -100px;
+    animation: shooting 6s linear infinite 4s;
+}
+
+@keyframes shooting {
+    0% {transform: translateX(0) translateY(0) rotate(-35deg);opacity: 0;}
+    10% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {transform:translateX(120vw)translateY(50vh)rotate(-35deg);nopacity: 0;}
+    100% {opacity: 0;}
+}

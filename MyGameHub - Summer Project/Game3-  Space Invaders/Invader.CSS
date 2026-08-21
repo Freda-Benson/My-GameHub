@@ -1,0 +1,41 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(70, 0, 100, 0.25),
+            transparent 45%
+        ),
+        url("images/Space-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #D8B4FE;
+}
+
+button {
+    color: white;
+    background: linear-gradient(90deg, rgba(110, 0, 180, 0.7), rgba(210, 0, 255, 0.7));
+    border: 2px solid #d000ff;
+    box-shadow: 0 0 10px #d000ff, 0 0 25px rgba(208, 0, 255, 0.5);   
+    height: 70px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#board {
+    background-color: black;
+}

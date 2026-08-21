@@ -1,0 +1,50 @@
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow:
+    4px 4px 0 #ff006e,
+    -3px -3px 0 #00ffff;
+    letter-spacing: 8px;
+    position: absolute;
+    top: -50px;
+    font-family: "Courier New", monospace;
+}
+
+body {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/pingpong-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Courier New", monospace;
+    overflow: hidden;
+}
+
+#board {
+    background-color: black;
+    border-top: 5px solid #8000B7;
+    border-bottom: 5px solid #8000B7;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: absolute;
+    top: 450px;
+    left: 220px;
+    padding: 15px 35px;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid white;
+    cursor: pointer;
+    box-shadow:
+    5px 5px 0 #ff006e,
+    -3px -3px 0 #00ffff;
+}
